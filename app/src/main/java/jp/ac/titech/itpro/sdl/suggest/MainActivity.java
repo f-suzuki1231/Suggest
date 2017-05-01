@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             ArrayList<String> result = new ArrayList<>();
-            HttpURLConnection conn = null;
+            HttpURLConnection conn = null;  //HTTPによる接続を提供するクラス
             String error = null;
-            try {
+            try {   //Suggest APIへのアクセス
                 String query = URLEncoder.encode(queryText, "UTF-8");
                 URL url = new URL(getString(R.string.suggest_url, query));
                 conn = (HttpURLConnection)url.openConnection();
